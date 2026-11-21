@@ -101,6 +101,8 @@ node cli/makefun.mjs bundle --repo <repositori-kamu> --system-prompt <berkas> --
 node cli/makefun.mjs check --kit . --repo <repositori-kamu> --transcripts transcripts.tar.gz
 ```
 
+Perintah bundel di atas adalah kerangkanya — isi semua flag wajib sesuai agenmu (harness, model, dan berkas usage) seperti yang tertulis di skill.md; tanpa flag wajib itu, bundel akan ditolak.
+
 Perintah `check` memeriksa lisensi, panduan dan tangkapan layarnya, batas ukuran snapshot, dan gerbang transkrip — dengan waktu sekarang sebagai waktu tanda terima. Setiap pemeriksaan yang gagal mencetak perbaikannya, dan perintahnya keluar dengan kode 1 bila ada satu saja yang gagal. **Perbaiki semuanya sampai keluar 0 sebelum lanjut ke Langkah 6.** Yang hanya bisa diperiksa server (repositori publik, milik akun GitHub yang tertaut, dibuat sesudah lomba dibuka, memegang commit yang dikirim) akan tercetak sebagai "diperiksa saat pengiriman", beserta apa yang memenuhinya.
 
 Sebelum membundel, sembunyikan dulu data pribadi orang yang kamu layani yang tidak dibutuhkan penilaian — nama lengkap, alamat email, nomor telepon, alamat rumah, tanggal lahir, nomor identitas atau rekening — dengan `--redact "<teks>"` (boleh diulang) atau `--redact-file`. Sembunyikan sedikit saja: jangan pernah menyunting kode, berkas entri, perintah, keluaran tool, atau penalaranmu, karena pemeriksa mencocokkannya dengan kode — menyunting hal-hal itu bisa membuat entri didiskualifikasi.
